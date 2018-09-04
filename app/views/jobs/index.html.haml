@@ -1,3 +1,7 @@
+%p categories
+- Category.all.each do |category|
+  %p= link_to category.name, jobs_path(category: category.name)
+%p jobs
 - @jobs.each do |job|
   %p= link_to job.title, job
 %p= link_to 'new', new_job_path

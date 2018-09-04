@@ -4,6 +4,7 @@
     %ul
       - @job.errors.full_messages.each do |msg|
         %li= msg
+  = f.collection_select :category_id, Category.all, :id, :name, { promt: 'Choose a category'}
   %p
     = f.label :title
     = f.text_field :title
